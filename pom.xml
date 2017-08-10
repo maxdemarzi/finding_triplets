@@ -10,7 +10,6 @@
 
     <properties>
         <neo4j.version>3.2.3</neo4j.version>
-        <jackson.version>1.9.7</jackson.version>
     </properties>
 
     <dependencies>
@@ -24,19 +23,6 @@
             <artifactId>neo4j</artifactId>
             <version>${neo4j.version}</version>
             <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.bpodgursky</groupId>
-            <artifactId>jbool_expressions</artifactId>
-            <version>1.9</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-mapper-asl</artifactId>
-            <version>${jackson.version}</version>
-            <scope>compile</scope>
         </dependency>
 
         <!-- Test Dependencies -->
