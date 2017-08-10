@@ -69,8 +69,19 @@ Call the procedure:
 You should get:
 
     {
-      "description": "(a1 and a2) or (a3 and a4)",
-      "id": "r1"
+      "tag1": "second tag",
+      "count": 4,
+      "tag2": "third tag"
+    }
+    {
+      "tag1": "third tag",
+      "count": 3,
+      "tag2": "fourth tag"
+    }
+    {
+      "tag1": "second tag",
+      "count": 3,
+      "tag2": "fourth tag"
     }
     
 Try a larger number:
