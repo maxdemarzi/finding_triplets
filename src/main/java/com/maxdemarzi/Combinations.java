@@ -25,8 +25,8 @@ public class Combinations {
     public Log log;
 
     @Procedure(name = "com.maxdemarzi.combinations", mode = Mode.READ)
-    @Description("CALL com.maxdemarzi.combinations(tag, number) - find combinations")
-    public Stream<MapResult> getCombinations(@Name("tag") String tag, @Name("size") Number k) throws IOException {
+    @Description("CALL com.maxdemarzi.combinations(tag, number, limit) - find combinations")
+    public Stream<MapResult> getCombinations(@Name("tag") String tag, @Name("size") Number k, @Name("limit") Number limit) throws IOException {
         // We start by finding the tag
         Node tagNode = db.findNode(Labels.Tag, "name", tag);
 
@@ -61,7 +61,7 @@ public class Combinations {
         results.sort( Map.Entry.<String, Integer>comparingByValue().reversed() );
 
         // Get the top 10 results
-        results = results.subList(0,Math.min(results.size(), 10));
+        results = results.subList(0,Math.min(results.size(), limit.intValue()));
 
         // Stream results
         return results.stream().map(result -> {

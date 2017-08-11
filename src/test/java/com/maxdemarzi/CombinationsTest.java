@@ -34,7 +34,7 @@ public class CombinationsTest {
 
     private static final Map QUERY1 =
             singletonMap("statements", singletonList(singletonMap("statement",
-                    "CALL com.maxdemarzi.combinations('first tag', 3) yield value return value")));
+                    "CALL com.maxdemarzi.combinations('first tag', 3, 10) yield value return value")));
 
     @Test
     public void testQuads() throws Exception {
@@ -51,7 +51,7 @@ public class CombinationsTest {
 
     private static final Map QUERY2 =
             singletonMap("statements", singletonList(singletonMap("statement",
-                    "CALL com.maxdemarzi.combinations('first tag', 4) yield value return value")));
+                    "CALL com.maxdemarzi.combinations('first tag', 4, 10) yield value return value")));
 
     private static final String MODEL_STATEMENT =
             "CREATE (t1:Tag {name:'first tag'})" +

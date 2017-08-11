@@ -63,8 +63,9 @@ Create some test data:
     CREATE (plan6)-[:TAGGED]->(t4)
     
 Call the procedure:
-    
-    CALL com.maxdemarzi.combinations('first tag', 3);    
+
+    CALL com.maxdemarzi.combinations(tag, number, limit)
+    CALL com.maxdemarzi.combinations('first tag', 3, 10);    
     
 You should get:
 
@@ -86,4 +87,4 @@ You should get:
     
 Try a larger number:
 
-    CALL com.maxdemarzi.combinations('first tag', 4);    
+    CALL com.maxdemarzi.combinations('first tag', 4, 10);    
